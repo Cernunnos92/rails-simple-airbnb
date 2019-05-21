@@ -7,9 +7,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
   </head>
 
   <body>
+    <div class="nav-bar">
+      <h2>Simple AirBnB</h2>
+      <div>
+        <input type="search" id="site-search" name="q"
+       aria-label="Search through site content">
+        <button class="btn btn-primary">Search</button>
+      </div>
+      <div>
+        <%= link_to "Add flat", new_flat_path %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
